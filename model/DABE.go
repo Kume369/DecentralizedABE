@@ -4,7 +4,7 @@ import (
 	"crypto/sha256"
 	"fmt"
 	// "github.com/MonteCarloClub/dabe/model/AES"
-	"DABE/model/AES"
+	"github.com/Kume369/DecentralizedABE/model/AES"
 	"github.com/Nik-U/pbc"
 )
 
