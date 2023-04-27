@@ -85,8 +85,11 @@ func ParsePolicyString(A *AccessStruct, s *string, startPos int, stopPos int) (*
 		//假设现在递归：C OR D
 	} else if strings.Index(trueChild, "||") != -1 || num == 1{
 		fmt.Printf("in OR Gate\n")
-		if num==1 {childAttr = strings.Split(trueChild," ")}
-		else {childAttr = strings.Split(trueChild, "||")}
+		if num==1 {
+			childAttr = strings.Split(trueChild," ")
+		} else {
+			childAttr = strings.Split(trueChild, "||")
+		}
 		//childAttr包含了policy的属性
 		for v := range childAttr {
 			if childAttr[v] != "" {
